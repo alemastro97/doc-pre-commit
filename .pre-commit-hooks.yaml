@@ -1,6 +1,5 @@
 - id: check-filetype
   name: Check filetype
   description: This hook checks if the committed files are Python files.
-  entry: python check_filetype.py
-  language: system
-  types: [python]
+  entry: check-filetype
+  language: python
