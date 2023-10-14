@@ -1,10 +1,4 @@
-from setuptools import setup
+from __future__ import annotations
 
-setup(
-    name='check-filetype',
-    version='0.1.0',
-    py_modules=['check_filetype'],
-    install_requires=[
-        # List your package's dependencies here
-    ],
-)
+from setuptools import setup
+setup()
