@@ -13,14 +13,14 @@ Please provide the docstring for the function using Python's best practices with
 
 
 def getDocFromGPT(f):
-    # response = openai.Completion.create(model='gpt-3.5-turbo-instruct',
-    #     prompt=prompt.format(f), temperature=0.9, max_tokens=150, top_p=1,
-    #     frequency_penalty=0, presence_penalty=0.6, stop=[' Human:', ' AI:'])
-    # pattern = '"""(.*?)"""'
-    # matches = re.findall(pattern, response.choices[0].text, re.DOTALL)
-    # if len(matches) == 0:
-    return 'ADD Docstring...'
-    # return matches[0].strip()
+    response = openai.Completion.create(model='gpt-3.5-turbo-instruct',
+        prompt=prompt.format(f), temperature=0.9, max_tokens=150, top_p=1,
+        frequency_penalty=0, presence_penalty=0.6, stop=[' Human:', ' AI:'])
+    pattern = '"""(.*?)"""'
+    matches = re.findall(pattern, response.choices[0].text, re.DOTALL)
+    if len(matches) == 0:
+        return 'ADD Docstring...'
+    return matches[0].strip()
 
 
 def add_docstrings(node):
