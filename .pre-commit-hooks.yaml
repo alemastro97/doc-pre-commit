@@ -1,7 +1,5 @@
--   id: trailing-whitespace
-    name: trim trailing whitespace
-    description: trims trailing whitespace.
-    entry: trailing-whitespace-fixer
+-   id: generate-docstring
+    name: generate-docstring
+    description: Generates DocString in python files.
+    entry: generate-docstring
     language: python
-    types: [text]
-    stages: [commit, push, manual]
