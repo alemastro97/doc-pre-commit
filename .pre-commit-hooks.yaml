@@ -8,7 +8,7 @@
     name: generate-docstring-pipeline
     description: Generates DocString in python files from GitLab CI.
     entry: |
-        git clone https://github.com/alemastro97/doc-pre-commit.git tmp_repo
+        git clone git@github.com:alemastro97/doc-pre-commit.git tmp_repo
         python tmp_repo/doc_pre_commit/generate_docstring.py $(git diff --name-only $CI_COMMIT_BEFORE_SHA $CI_COMMIT_SHA)
         rm -rf tmp_repo
         git add .
