@@ -66,6 +66,8 @@ def main(argv: (Sequence[str] | None)=None) ->int:
         parser.error('--markdown-linebreak-ext requires a non-empty argument')
     all_markdown = '*' in md_args
     api_key = os.environ.get('OPENAI_API_KEY')
+    print("My api key:",api_key)
+    
     openai.api_key = api_key if args.api_key is None else args.api_key
     md_exts = [('.' + x.lower().lstrip('.')) for x in ','.join(md_args).
         split(',')]
