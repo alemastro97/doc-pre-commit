@@ -3,3 +3,4 @@
     description: Generates DocString in python files.
     entry: generate-docstring
     language: python
+    additional_dependencies: ['astor', 'openai']
