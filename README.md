@@ -60,9 +60,3 @@ doc_generation:
 
 
 ```
-
-
-## License
-This project is licensed under the Creative Commons Attribution-NonCommercial License.
-
-Please note that this license does not allow for commercial usage of this code without prior permission.
